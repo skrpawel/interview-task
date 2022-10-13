@@ -1,28 +1,29 @@
-const API_URL = 'https://pokeapi.co/api/v2/pokemon'
+const POKEMON_URL = 'https://pokeapi.co/api/v2/pokemon'
+const SPECIES_URL = 'https://pokeapi.co/api/v2/pokemon-species'
 
-const nav_bar = document.getElementById('nav');
+let nav_bar = document.getElementById('nav');
 
 
-const call = async function API_CALL(url) {
-    fetch(url)
+async function call(url = POKEMON_URL) {
+    return fetch(url)
         .then((response) => response.json())
         .then((data) => {
             return data;
-        })
+        }).catch(function (error) {
+            console.log(error);
+        });
 }
 
-const main = async function (url) {
-    const a = await call(url).then((response) => {
-        console.log(response);
-    });
+
+async function main(url) {
+    let data = await call(url);
+    data.results.map((el, index) => {
+        var li = document.createElement('li')
+        li.innerHTML = `${index} ${el.name}`
+        document.getElementById('nav').appendChild(li);
+    })
+    // expected output: "resolved"
 }
 
-const fatchedData = main(API_URL)
 
-console.log(fatchedData);
-
-fatchedData.map(el => {
-    var li = document.createElement('li')
-    li.innerHTML = el;
-    tr.appendChild(li);
-})
+main(POKEMON_URL)

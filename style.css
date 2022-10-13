@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: grey;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+nav {
+  background: white;
+  padding: 1rem;
+  padding-right: 2rem;
+  max-height: 400px;
+  width: fit-content;
+
+}
+
+#nav {
+  overflow-y: scroll;
+}
+
+nav li {
+  list-style: none;
+
+}
+
+main {
+  min-width: 500px;
+  min-height: 400px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 3fr 
+}
+
+#pokemon-name {
+  grid-column: 1/3
+
+}
