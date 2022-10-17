@@ -21,8 +21,11 @@ async function main(url) {
     let data = await call(url);
     data.results.map((el, index) => {
         pokemons.push(el);
-        var li = document.createElement('li')
-        li.innerHTML = `${('0000' + (index + 1)).slice(-4)}  ${el.name}`
+        var li = document.createElement('li');
+        var block = document.createElement('div');
+        block.className = 'block'
+        li.innerHTML = `${('0000' + (index + 1)).slice(-4)}  ${el.name}`;
+        block.innerHTML = el.name;
         document.getElementById('nav').appendChild(li);
         li.addEventListener('click', (event) => {
             main_spec(POKEMON_URL + '/' + el.name, index);
@@ -46,7 +49,7 @@ async function main_spec(url, index) {
     let name_div = document.getElementById("pokemon-name");
     let img_div = document.getElementById("pokemon-image");
 
-    [height_div.textContent, weight_div.textContent, name_div.textContent] = ['', '', ''];
+    height_div.textContent = weight_div.textContent = name_div.textContent = ''
 
     if (data !== undefined) {
         height_div.textContent += data.height;
