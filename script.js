@@ -27,6 +27,12 @@ async function main(url) {
         li.addEventListener('click', (event) => {
             main_spec(POKEMON_URL + '/' + el.name, index);
             desc_spec(SPECIES_URL + '/' + el.name);
+
+            var current = document.getElementsByClassName("active");
+
+            if (current.length > 0) current[0].className = current[0].className.replace("active", "");
+
+            event.target.className = 'active';
         })
 
     })
@@ -48,6 +54,8 @@ async function main_spec(url, index) {
         name_div.textContent += `${('0000' + (index + 1)).slice(-4)}  ${data.name}`;
         img_div.src = data.sprites.front_default;
     }
+
+
 }
 
 async function desc_spec(url, index) {

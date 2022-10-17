@@ -76,7 +76,7 @@ li {
   padding: 0.5em;
 }
 
-nav li:hover {
+nav li:hover, .active {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9a3430+0,000000+50,000000+100 */
   background: #9a3430; /* Old browsers */
   background: -moz-linear-gradient(top,  #9a3430 0%, #000000 50%, #000000 100%); /* FF3.6-15 */
@@ -84,6 +84,10 @@ nav li:hover {
   background: linear-gradient(to bottom,  #9a3430 0%,#000000 50%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a3430', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
   cursor: pointer;
+}
+
+nav li:hover {
+  background: #512d2b; 
 }
 
 main {
