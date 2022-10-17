@@ -11,21 +11,25 @@
 </head>
 
 <body>
-    <nav>
-        <h1>Pokedex</h1>
-        <div id="nav">
-        </div>
-    </nav>
-    <main>
-        <div id="pokemon-name">001 POKEMON</div>
-        <div>OBRAZ</div>
-        <div>
-            <li>HEIGHT: </li>
-            <li>LEEEEE</li>
-        </div>
-        <div></div>
-        <div></div>
-    </main>
+    <div class="content">
+        <nav>
+            <div id="nav">
+            </div>
+        </nav>
+        <main>
+            <div id="pokemon-name" class="rounded">
+                <div style="visibility:hidden">_</div>
+            </div>
+            <div class="rounded"><img id='pokemon-image' class="center" /></div>
+            <div class="rounded" id="list">
+                <li>HEIGHT: <span id="height"> </span></li>
+                <li>WEIGHT: <span id="weight"> </span></li>
+            </div>
+            <p id="description-title" class="rounded">Description</p>
+            <div id="description" class="rounded">
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>

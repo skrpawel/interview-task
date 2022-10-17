@@ -1,45 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: grey;
+  font-family:'Epilogue', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
   display: flex;
-  height: 100vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  box-sizing: border-box;
+  height: 100vh;
+  font-size: 16px;
 }
+
+#nav-title {
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  border: 4px solid grey;
+}
+
+
 
 nav {
-  background: white;
-  padding: 1rem;
-  padding-right: 2rem;
+  color: white;
+  grid-row: 2/3;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#131313+5,131313+5,474747+39,666666+59,666666+78,4c4c4c+100 */
+  background: #131313; /* Old browsers */
+  background: -moz-linear-gradient(top,  #131313 5%, #131313 5%, #474747 39%, #666666 59%, #666666 78%, #4c4c4c 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #131313 5%,#131313 5%,#474747 39%,#666666 59%,#666666 78%,#4c4c4c 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #131313 5%,#131313 5%,#474747 39%,#666666 59%,#666666 78%,#4c4c4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#4c4c4c',GradientType=0 ); /* IE6-9 */
   max-height: 400px;
   width: fit-content;
-
-}
-
-#nav {
   overflow-y: scroll;
 }
 
-nav li {
-  list-style: none;
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 99;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222222; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #C1C1C1; 
+}
+
+#nav {
+  width: 100%;
+  
+}
+
+li {
+  list-style: none;
+}
+
+ nav li {
+  padding: 2px 1rem 2px 5px;
+}
+
+#list {
+  padding: 0.5em;
+}
+
+nav li:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9a3430+0,000000+50,000000+100 */
+  background: #9a3430; /* Old browsers */
+  background: -moz-linear-gradient(top,  #9a3430 0%, #000000 50%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #9a3430 0%,#000000 50%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #9a3430 0%,#000000 50%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a3430', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  cursor: pointer;
 }
 
 main {
   min-width: 500px;
-  min-height: 400px;
-  background: white;
+  max-width: 500px;
+  min-height: 400px !important;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4c4c4c+0,474747+39,131313+100 */
+  background: #4c4c4c; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #4c4c4c 0%, #474747 39%, #131313 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #4c4c4c 0%,#474747 39%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #4c4c4c 0%,#474747 39%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 2fr 3fr 
+  grid-template-rows: 15% 35% 10%;
+
 }
 
 #pokemon-name {
-  grid-column: 1/3
+  padding: 0.5em;
+  text-align: center;
+  grid-column: 1/3;
+  align-self: center;
+}
 
+#description-title {
+  padding: 0.5em;
+  margin: 0 0.5em;
+  align-self: end;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+
+#description{
+  align-self: stretch;
+  grid-column: 1/3;
+  margin: 0 0.5em 0.5em !important;
+  padding: 0.5em;
+  border-radius: 0px 5px 5px;
+  border-top: 1px solid white;
+}
+
+
+.rounded {
+  background: #DADECD;
+  border-radius: 5px;
+  margin: 0.5em;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
